@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div tag html</title>
+   
+    <style>
+        .container {
+           display: flex;
+        }
+        .container > div {
+            width: 33%;
+            margin: 20px;
+            padding: 20px;
+        }
+        .div1 {
+            background-color: bisque;
+        }
+        .div2 {
+            background-color: aqua;
+        }
+        .div3 {
+            background-color:darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h2>Div tag is a container</h2>
+    <div class="container">
+        <div class="div1">
+            <h2>Hargeisa</h2>
+            <p>hargeisa is capital of somaliland located in east africa with indian ocian</p>
+        </div>
+        <div class="div2">
+            <h2>Borama</h2>
+            <p>hargeisa is capital of somaliland located in east africa with indian ocian</p>
+        </div>
+        <div class="div3">
+            <h2>Berbera</h2>
+            <p>hargeisa is capital of somaliland located in east africa with indian ocian</p>
+        </div>
+    </div>
+
+    <!-- script id -->
+    <div id="myHeader">
+
+    </div>
+
+    <!-- example for javascript -->
+    <script>
+        function displayResult() {
+          document.getElementById("myHeader").innerHTML = "Welcome back Guled!";
+        }
+        displayResult();
+    </script>
+   
+</body>
+</html>
