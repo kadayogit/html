@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Script</title>
+</head>
+<body>
+
+    <h3>basic scripts</h3>
+
+    <p id="msg"></p>
+    
+
+    <!-- script -->
+    <script>
+        function hello() {
+            document.getElementById('msg').innerHTML = "Hi, mrs: Guled Mohamed";
+        }
+        // call the function
+        hello();
+    </script>
+
+    <!-- button script event -->
+    <button onclick="document.getElementById('msg').innerHTML = Date();">Today</button>
+
+    <!-- noscript tag when the browser not support the script code -->
+    <noscript>Your browser not supported script!</noscript>
+
+    <!-- <base> relative URL  -->
+    <base href="https://www.google.com" target="_blank">
+    <a href="index.html">index page</a>
+
+</body>
+</html>
