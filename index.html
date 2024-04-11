@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTMl Learning!</title>
+    <link rel="stylesheet" href="favicon.png">
+
+    <style>
+        a {
+           
+            background-color: transparent;
+        }
+    </style>
+
 </head>
 <body>
     <h3>HTMl learning and revision!</h3>
+    <!-- html <a> links attribute target with values, _self, _blank, _parent, _top -->
+        <a href="index.html">_self link</a>
+        <a href="page.html" target="_blank">go page</a>
+
+        <!-- absolute URL and Relative URL -->
+        <h2>Absolute URLs</h2>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+
+        <h2>Relative URLs</h2>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+        <!-- email link example  -->
+        <a href="mailto:someone@example.com">Send email</a>
+
+        <!-- img tag example -->
+        <img src="image.jpg" alt="error message if image not loading">
+        <br />
+
+        <!-- change link states using :link, :hover, :visited -->
+        <a href="page.html">go to page!</a>
+
+
+        <!-- bookmark long text-->
+        <a href="#t1">text 1</a>
+        <a href="#t2">text 2</a>
+        <p id="t1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus maiores dicta laborum consequatur inventore distinctio minima dolore. Incidunt ipsum ipsam perspiciatis ratione eveniet eaque amet, quod quaerat, dolore magnam ad?
+        </p>
+        <p id="t2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus maiores dicta laborum consequatur inventore distinctio minima dolore. Incidunt ipsum ipsam perspiciatis ratione eveniet eaque amet, quod quaerat, dolore magnam ad?
+        </p>
+
+        <!-- <picture> tag examples -->
+            <!-- Show different images for different screen sizes: -->
+        <picture>
+            <source media="(min-width: 650px)" srcset="img_food.jpg">
+            <source media="(min-width: 465px)" srcset="img_car.jpg">
+            <img src="img_girl.jpg">
+        </picture>
+              
 </body>
 </html>
