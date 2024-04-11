@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+            border-color: brown;
+        }
+    </style>
+</head>
+<body>
+<!-- normal table design -->
+    <h2>Create horizontal tables</h2>
+    <table>
+        <tr>
+            <th>Project ID</th>
+            <th>Starting date</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>0092</td>
+            <td>03/04/2024</td>
+            <td>In progress</td>
+        </tr>
+    </table>
+
+    <!-- table with different sizes -->
+    <h2>Create horizontal tables</h2>
+    <table style="width: 100%; text-align: center;">
+        <tr>
+            <th style="width: 70%;">Project ID</th>
+            <th>Starting date</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>0092</td>
+            <td>03/04/2024</td>
+            <td>In progress</td>
+        </tr>
+    </table>
+
+    <!-- vertical table -->
+    <h2>Vertical Table Headers</h2>
+    <table>
+        <tr>
+        <th>first name</th>
+        <td>Guled</td>
+        </tr>
+        <tr>
+            <th>last name</th>
+            <td>Mohamed</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>4494833</td>
+        </tr>
+    </table>
+
+    <h2>Table with caption</h2>
+    <table style="width:100%;">
+        <caption>Monthly savings</caption>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$50</td>
+        </tr>
+      </table>
+
+      <!-- HTML Table Colgroup -->
+      <h2>Table Colgroup</h2>
+    <table>
+        <colgroup>
+            <col span="2" style="background-color: blueviolet;">
+        </colgroup>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Address</th>
+            <th>phone</th>
+        </tr>
+        <tr>
+            <td>Guled</td>
+            <td>Mohamed</td>
+            <td>calaamadaha</td>
+            <td>39939320</td>
+        </tr>
+    </table>
+</body>
+</html>
