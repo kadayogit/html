@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMl Forms</title>
+</head>
+<body>
+    <!-- html forms -->
+    <form action="#" method="get" autocomplete="on">
+        <label for="name">Name</label>
+        <input type="text" name="name" size="60"/>
+        <label for="lastname">LastName</label>
+        <input type="text" name="lastname"/>
+        <button type="submit">submit</button>
+
+        <!-- select tag -->
+        <select name="cars" id="" size="2" multiple>
+            <option value="select">select</option>
+            <option value="110" selected>110</option>
+            <option value="vitiz">vitiz</option>
+        </select>
+
+        <!-- textarea tag -->
+        <textarea name="comments" id="" cols="30" rows="10">
+            What is your mind today?
+        </textarea>
+
+        <!-- fieldset, and legend tags -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text">
+            <label for="nationality">Nationality</label>
+            <input type="text" name="nationality">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone">
+        </fieldset>
+        <fieldset>
+            <legend>Qualifications</legend>
+            <label for="education">Eduction Level</label>
+            <select name="edu" id="">
+                <option value="master">Master</option>
+                <option value="degree">Degree</option>
+                <option value="highschool">High School</option>
+            </select>
+            <label for="institution">Institution</label>
+            <input type="text" name="" id="">
+        </fieldset>
+
+        <!-- datalist tag with input tag -->
+        <input list="data" />
+        <datalist id="data">
+            <option value="Guled">
+            <option value="Ali">
+            <option value="Mohamed">
+            <option value="Muna">
+        </datalist>
+    </form>
+
+         <!-- input tag example -->
+         <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)"> 
+            0 <input type="range"  id="a" name="a" value="50">
+            100 + <input type="number" id="b" name="b" value="50">
+            = <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+        <br><br>
+
+        <!--Here are the different input types you can use in HTML:  -->
+        <input type="text" maxlength="3">
+        <input type="radio">
+        <input type="checkbox">
+        <input type="file">
+        <input type="date">
+        <!-- <input type="datetime"> -->
+        <input type="datetime-local">
+        <input type="reset">
+        <input type="button">
+        <input type="image">
+        <input type="submit">
+        <input type="hidden">
+        <input type="password">
+        <input type="number">
+        <input type="search">
+        <label for="email">Email</label>
+        <input type="email" readonly value="admin@admin.com">
+        <input type="color">
+        <input type="time">
+        <input type="tel">
+        <input type="url">
+        <input type="week">
+        <input type="month">
+        
+
+        <!-- min and max attributes input tag -->
+        <form>
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" disabled>
+        </form>
+
+        <!-- range examples -->
+        <form>
+            <label for="vol">Volume (between 0 and 50):</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+        </form>
+
+        <!-- input type tel value -->
+        <form>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        </form>
+
+        <!-- example, Set a max date, a min date, and a range of legal values: -->
+        <form>
+            <label for="datemax">Enter a date before 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+          
+            <label for="datemin">Enter a date after 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+          
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+        </form>
+
+        <!--Example, An input field that can contain only three letters (no numbers or special characters): -->
+        <form>
+            <label for="country_code">Country code:</label>
+            <input type="text" id="country_code" name="country_code"
+            pattern="[A-Za-z]{3}" title="Three letter country code"   placeholder="123-45-678">
+        </form>
+
+        <!--Example, An input field with a specified legal number intervals: -->
+        <form>
+            <label for="points">Points:</label>
+            <input type="number" id="points" name="points" step="3">
+        </form>
+
+        <!--Example, Let the "First name" input field automatically get focus when the page loads: -->
+        <form action="">
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname" autofocus>
+        </form>
+        
+
+        <!-- example for formenctype -->
+        <form action="/action_page_binary.asp" method="post">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <input type="submit" value="Submit">
+            <input type="submit" formenctype="multipart/form-data"
+            value="Submit as Multipart/form-data">
+        </form>
+
+        <!-- new attrihutes for submit button in html -->
+        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+        <input type="submit" formenctype="multipart/form-data">
+        <input type="submit" formmethod="post" value="Submit using POST">
+        <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+        <input type="submit" formnovalidate="formnovalidate">
+</body>
+</html>
