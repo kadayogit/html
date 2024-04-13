@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Server API</title>
+</head>
+<body>
+    <!-- HTML Server API, Server-Sent Events (SSE) API -->
+    
+    <!-- Check Server-Sent Events Support -->
+    <script>
+        if(typeof(EventSource) !== "undefined") {
+        // Yes! Server-sent events support!
+        document.write("Yes! Server-sent events support!");
+        } else {
+        // Sorry! No server-sent events support..
+        document.write("Sorry! No server-sent events support..");
+        }
+    </script>
+
+    <!-- form -->
+    <form action="#">
+        <input type="text" list="data">
+        <datalist id="data">
+            <option value="Guled"></option>
+            <option value="Ali"></option>
+            <option value="Amina"></option>
+        </datalist>
+    </form>
+
+    <textarea name="" id="" cols="30" rows="10" placeholder="enter comment"></textarea>
+    <input type="text" name="" id="" hint="enter name">
+
+    <!-- test google link -->
+    <a href="https://www.google.com" target="__">
+        Click here to visit Google
+        </a>
+
+    
+</body>
+</html>
