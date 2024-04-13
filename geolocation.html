@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation API in HTML</title>
+
+    <!-- drag and drop API example -->
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+</head>
+<body>
+    <h3>Geolocation API in HTML</h3>
+
+    <!-- to call the function, create click button event -->
+    <button onclick="getLocation();">Get location</button>
+    <div id="demo">
+
+    </div>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <img id="drag1" src="tools.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+    <!-- script API -->
+    <script>
+        const x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+    
+</body>
+</html>
