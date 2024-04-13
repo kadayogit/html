@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage HTML on the Browser</title>
+</head>
+<body>
+
+    <!-- Local Storage HTML on the Browser -->
+    <!-- window.localStorage() or window.sessionStorage(); -->
+
+    <!-- check if the browser support local or session storage first -->
+    <script>
+            if (typeof(Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+            document.write("It Works Nicely!");
+            } else {
+            // Sorry! No Web Storage support..
+            console.log("Sorry! No Web Storage support..")
+            }
+    </script>
+
+    <!-- window.localStorage - stores data with no expiration date -->
+    <!-- window.sessionStorage - stores data for one session (data is lost when the browser tab is closed) -->
+
+    <br><br>
+    <!-- Check Web Worker Support -->
+    <script>
+        if (typeof(Worker) !== "undefined") {
+        // Yes! Web worker support!
+        document.write("web worker works well!");
+        } else {
+        // Sorry! No Web Worker support..
+        document.write("Sorry! No Web Worker support..");
+      }
+    </script>
+
+    <!-- web worker example code -->
+    <br><br>
+    <p>Count web worker: <span id="result"></span></p>
+    <!-- create two buttons startworker and stopworker -->
+    <button onclick="startWorker()">startWorker</button>
+    <button onclick="stopWorker()">stopworker</button>
+    <script>
+        var w;
+        
+        function startWorker() {
+          if (typeof(Worker) !== "undefined") {
+            if (typeof(w) == "undefined") {
+              w = new Worker("demo_workers.js");
+            }
+            w.onmessage = function(event) {
+              document.getElementById("result").innerHTML = event.data;
+            };
+          } else {
+            document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+          }
+        }
+        
+        function stopWorker() {
+          w.terminate();
+          w = undefined;
+        }
+        </script>
+    
+</body>
+</html>
